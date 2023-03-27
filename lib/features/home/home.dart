@@ -2,6 +2,8 @@ import 'package:architecture/features/home/desktop/desktop_home.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
+import 'mobile/mobile_home.dart';
+
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
@@ -22,7 +24,7 @@ class HomePage extends StatelessWidget {
           return Container(color: Colors.yellow);
         }
 
-        return Container(color: Colors.purple);
+        return MobileHome();
       },
     );
   }
