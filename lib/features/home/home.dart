@@ -13,18 +13,18 @@ class HomePage extends StatelessWidget {
       builder: (context, sizingInformation) {
         // Check the sizing information here and return your UI
         if (sizingInformation.deviceScreenType == DeviceScreenType.desktop) {
-          return DesktopHome();
+          return const DesktopHome();
         }
 
         if (sizingInformation.deviceScreenType == DeviceScreenType.tablet) {
-          return DesktopHome();
+          return const DesktopHome();
         }
 
         if (sizingInformation.deviceScreenType == DeviceScreenType.watch) {
           return Container(color: Colors.yellow);
         }
 
-        return MobileHome();
+        return const MobileHome();
       },
     );
   }

@@ -2,7 +2,6 @@ import 'package:architecture/core/images/app_images.dart';
 import 'package:architecture/core/presentation/widgets/vspace.dart';
 import 'package:architecture/features/home/widgets/desktop_home_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:slide_drawer/slide_drawer.dart';
 
 import '../widgets/mobile_home_widgets.dart';
 
@@ -23,7 +22,7 @@ class _MobileHomeState extends State<MobileHome>
     super.initState();
 
     _animationController =
-        AnimationController(vsync: this, duration: Duration(milliseconds: 300));
+        AnimationController(vsync: this, duration: const Duration(milliseconds: 300));
   }
 
   _toggleAnimation() {
@@ -49,9 +48,9 @@ class _MobileHomeState extends State<MobileHome>
           double scale = 1 - (_animationController!.value * 0.3);
           return Stack(
             children: [
-              Scaffold(
+              const Scaffold(
                 backgroundColor: Colors.black,
-                body: const DrawerData(),
+                body: DrawerData(),
               ),
               Transform(
                 transform: Matrix4.identity()
@@ -61,15 +60,15 @@ class _MobileHomeState extends State<MobileHome>
                 child: Scaffold(
                   backgroundColor: Colors.white,
                   appBar: AppBar(
-                    title: Text("BRAND NAME"),
+                    title: const Text("BRAND NAME"),
                     leading: IconButton(
-                      icon: Icon(Icons.menu),
+                      icon: const Icon(Icons.menu),
                       onPressed: () {
                         _toggleAnimation();
                       },
                     ),
                   ),
-                  body: MobileData(),
+                  body: const MobileData(),
                 ),
               )
             ],
@@ -91,18 +90,18 @@ class _MobileDataState extends State<MobileData> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      padding: EdgeInsets.all(20),
+      padding: const EdgeInsets.all(20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          TextWidget(
+          const TextWidget(
             text: "Make your idea come true with great team and experience",
             minFontSize: 14,
             fontSize: 50,
             fontWeight: FontWeight.w900,
           ),
-          Vspace(40),
-          TextWidget(
+          const Vspace(40),
+          const TextWidget(
             text:
                 "Dont't let you choose the wrong contractor besides spending money. you also waste your mind and energy. turn your idea into a building with us",
             color: Color(0xffB1B1B1),
@@ -110,9 +109,9 @@ class _MobileDataState extends State<MobileData> {
             fontWeight: FontWeight.normal,
             height: 1.3,
           ),
-          Vspace(40),
-          Center(child: MobileButton()),
-          Vspace(20),
+          const Vspace(40),
+          const Center(child: MobileButton()),
+          const Vspace(20),
           Image.asset(AppImages.homeImage)
         ],
       ),
@@ -129,9 +128,9 @@ class MobileButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
         style: ElevatedButton.styleFrom(
-            padding: EdgeInsets.all(24), primary: Color(0xff4844FF)),
+            padding: const EdgeInsets.all(24), backgroundColor: const Color(0xff4844FF)),
         onPressed: () {},
-        child: TextWidget(
+        child: const TextWidget(
           text: "Send Inquery",
           fontWeight: FontWeight.bold,
           color: Colors.white,

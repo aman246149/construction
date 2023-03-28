@@ -5,7 +5,7 @@ import 'desktop_home_widgets.dart';
 
 
 class DrawerData extends StatelessWidget {
-  const DrawerData();
+  const DrawerData({super.key});
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -14,7 +14,7 @@ class DrawerData extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
+          children: const [
             TextWidget(
               text: "BrandName",
               fontSize: 26,
@@ -53,7 +53,7 @@ class CommonDrawerButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(8),
+      padding: const EdgeInsets.all(8),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
           border: Border.all(color: Colors.white, width: 0.3)),

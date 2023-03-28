@@ -65,6 +65,10 @@ dependencies:
   auto_size_text: ^3.0.0
   responsive_framework: ^0.2.0
   slide_drawer: ^1.0.3
+  dyn_mouse_scroll: ^1.0.7
+  expandable: ^5.0.1
+  carousel_slider: ^4.2.1
+
 
 dev_dependencies:
   flutter_test:

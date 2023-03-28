@@ -39,11 +39,11 @@ class MyApp extends StatelessWidget {
           minWidth: 480,
           defaultScale: true,
           breakpoints: [
-            ResponsiveBreakpoint.autoScale(480, name: MOBILE),
-            ResponsiveBreakpoint.autoScale(800, name: TABLET),
-            ResponsiveBreakpoint.autoScaleDown(1500, name: DESKTOP),
+            const ResponsiveBreakpoint.autoScale(480, name: MOBILE),
+            const ResponsiveBreakpoint.autoScale(800, name: TABLET),
+            const ResponsiveBreakpoint.autoScaleDown(1500, name: DESKTOP),
           ],
-          background: Container(color: Color(0xFFF5F5F5))),
+          background: Container(color: const Color(0xFFF5F5F5))),
     );
   }
 }
